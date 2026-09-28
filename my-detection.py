@@ -4,7 +4,7 @@ import jetson_inference
 import jetson_utils
 
 net = jetson_inference.detectNet(model="ssd-mobilenet-v2", threshold=0.5)
-img = loadImage("/home/nvidia/jetson-inference/data/images/fruit_14.jpg")
+img = loadImage("/home/nvidia/jetson-inference/data/images/fruit_16.jpg")
 detections = net.Detect(img)
 print(f"total targets: {len(detections)}")
 for det in detections:
